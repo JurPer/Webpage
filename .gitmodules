@@ -1,3 +1,6 @@
 [submodule "evolution"]
 	path = evolution
 	url = https://github.com/JurPer/evolution
+[submodule "ColorBubblesP5"]
+	path = ColorBubblesP5
+	url = https://github.com/JurPer/ColorBubblesP5
