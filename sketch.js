@@ -2,7 +2,7 @@
 var bubbles = [];
 
 function setup() {
-	createCanvas(1200, 800);
+	createCanvas(1200, 700);
     
     for (let i = 0; i < 10000; i++) {
         bubbles.push(new Bubble(random(width), random(height), random(10, 40)));
@@ -33,10 +33,10 @@ class Bubble {
     }
     
     show() {
-        //stroke(255);
-        //strokeWeight(4);
+        // stroke(255);
+        // strokeWeight(4);
         noStroke();
-        fill(255, 10);
+        fill(50, 200, 5, 10);
         ellipse(this.x, this.y, this.r * 2);
     }
 }
