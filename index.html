@@ -11,31 +11,114 @@
 
     <title>JurPer Main page</title>
     <style>
-        body {
-            padding: 0;
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+ 
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {
+            width: 83.33%;
+            height: 900px;
+        }
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .header {
+            background-color: #17c242;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
             margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            list-style-type: none;
+            list-style: none;
+            text-align: center;
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            border: none;
+            color: #ffffff;
+            font-size: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
         }
 
         .button {
-            background-color: #1c87c9;
-            border: none;
-            color: white;
-            padding: 20px 34px;
-            text-align: center;
+            width: 100%;
             text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 4px 2px;
             cursor: pointer;
         }
+        a {
+            display: block;
+        }
+        
+        .frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+        
     </style>
 
 </head>
-
 <body>
-    <base href="https://jurper.github.io/" />
-    <a href="/evolution" class="button">Evolution</a>
-    <a href="/ColorBubblesP5" class="button">Color Bubbles</a>
+
+    <div class="header">
+        <h1>Projects</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-2 menu">
+            <ul>
+                <base href="https://jurper.github.io/" />
+                <li>
+                    <a href="/evolution" target="iFrameWindow" class="button">Evolution</a>
+                </li>
+                <li>
+                    <a href="/ColorBubblesP5" target="iFrameWindow" class="button">Color Bubbles</a>
+                </li>
+                <li>
+                    <a href="C:\Users\jurip\GitHub\JurPer.github.io\memory\index.html" target="iFrameWindow"
+                        class="button">Memory</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-10">
+            <iframe class="frame" src="/evolution" name="iFrameWindow"
+                onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'>
+            </iframe>
+        </div>
+    </div>
 </body>
 
 </html>
