@@ -28,8 +28,8 @@ function draw() {
 
 function mousePressed(event) {
     if (event.type == "mousedown") {
-        col = Math.floor((event.x - memGrid.x) / (memGrid.width + memGrid.pad));
-        row = Math.floor((event.y - memGrid.y) / (memGrid.height + memGrid.pad));
+        let col = Math.floor((event.x - memGrid.x) / (memGrid.width + memGrid.pad));
+        let row = Math.floor((event.y - memGrid.y) / (memGrid.height + memGrid.pad));
         if (!(col < 0 || row < 0) && !(col >= memGrid.cols || row >= memGrid.rows)) {
             memGrid.grid[row][col] = true;
         }
